@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>textures</key>
+		<array>
+			<dict>
+				<key>icon</key>
+				<string>Texture_1</string>
+				<key>texture</key>
+				<string></string>
+				<key>sign</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>icon</key>
+				<string>Texture_2</string>
+				<key>texture</key>
+				<string></string>
+				<key>sign</key>
+				<string>oldSchool.png</string>
+			</dict>
+			<dict>
+				<key>icon</key>
+				<string>Texture_3</string>
+				<key>texture</key>
+				<string>halo_15.jpg</string>
+				<key>sign</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>isPurchase</key>
+		<true/>
+		<key>icon</key>
+		<string></string>
+		<key>ProductCode</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

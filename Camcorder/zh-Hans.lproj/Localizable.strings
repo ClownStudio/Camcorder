@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Camcorder
+
+  Created by 张文洁 on 2018/6/7.
+  Copyright © 2018年 JamStudio. All rights reserved.
+*/
+
+"AlbumName" = "Camcorder";
+"Expected" = "敬请期待";
+"RecordSuccess" = "录制完成";
+"Tip" = "提示";
+"Evaluate" = "能请给我们的应用一个评价么？";
+"OK" = "好的";
+"Cancel" = "取消";
+"NoSupportFlash" = "对不起，您的设备占不支持切换闪光灯模式哦";
