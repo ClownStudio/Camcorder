@@ -39,7 +39,7 @@
     [collectonResuts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         PHAssetCollection *assetCollection = obj;
         //Camera Roll是我们写入照片的相册
-        if ([assetCollection.localizedTitle isEqualToString:_folderName])  {
+        if ([assetCollection.localizedTitle isEqualToString:self->_folderName])  {
             [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
                 //请求创建一个Asset
                 PHAssetChangeRequest *assetRequest = [PHAssetChangeRequest creationRequestForAssetFromImageAtFileURL:url];
@@ -77,7 +77,7 @@
     [collectonResuts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         PHAssetCollection *assetCollection = obj;
         //folderName是我们写入照片的相册
-        if ([assetCollection.localizedTitle isEqualToString:_folderName])  {
+        if ([assetCollection.localizedTitle isEqualToString:self->_folderName])  {
             [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
                 //请求创建一个Asset
                 PHAssetChangeRequest *assetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:url];
@@ -112,7 +112,7 @@
         PHFetchResult *collectonResuts = [PHCollectionList fetchTopLevelUserCollectionsWithOptions:nil];
         [collectonResuts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             PHAssetCollection *assetCollection = obj;
-            if ([assetCollection.localizedTitle isEqualToString:_folderName])  {
+            if ([assetCollection.localizedTitle isEqualToString:self->_folderName])  {
                 PHFetchResult *assetResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:[PHFetchOptions new]];
                 [assetResult enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                     PHAsset *asset = obj;

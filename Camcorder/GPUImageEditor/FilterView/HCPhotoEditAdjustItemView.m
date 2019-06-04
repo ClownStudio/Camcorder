@@ -162,7 +162,7 @@
     view.transform = CGAffineTransformMakeTranslation(0, view.bounds.size.height);
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         view.transform = CGAffineTransformIdentity;
-        editView.alpha = 0;
+        self->editView.alpha = 0;
     } completion:^(BOOL finished) {
         
     }];
@@ -266,12 +266,12 @@
 -(void)hideSliderView
 {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        configView.alpha = 0.4;
-        configView.transform = CGAffineTransformMakeTranslation(0, configView.bounds.size.height);
-        editView.alpha = 1;
+        self->configView.alpha = 0.4;
+        self->configView.transform = CGAffineTransformMakeTranslation(0, self->configView.bounds.size.height);
+        self->editView.alpha = 1;
     } completion:^(BOOL finished) {
-        [configView removeFromSuperview];
-        configView = nil;
+        [self->configView removeFromSuperview];
+        self->configView = nil;
     }];
 }
 

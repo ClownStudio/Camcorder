@@ -72,7 +72,7 @@
             [outFilter useNextFrameForImageCapture];
             [pic processImage];
             UIImage *image2 = [outFilter imageFromCurrentFramebuffer];
-            [colorFilterIcons addObject:image2];
+            [self->colorFilterIcons addObject:image2];
         }
         
         for (int index = 0; index < filters2.count; index++)
@@ -88,7 +88,7 @@
             [outFilter useNextFrameForImageCapture];
             [pic processImage];
             UIImage *image2 = [outFilter imageFromCurrentFramebuffer];
-            [effectFilterIcons addObject:image2];
+            [self->effectFilterIcons addObject:image2];
         }
         
     });
@@ -380,9 +380,9 @@
 -(void)restoreMainView
 {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        topView.transform = CGAffineTransformIdentity;
-        mainImageView.frame = CGRectMake(10, topView.bounds.size.height + 10, self.view.bounds.size.width-20, self.view.bounds.size.height - bottomScrollView.bounds.size.height - topView.bounds.size.height - 20);
-            bottomScrollView.alpha = 1;
+        self->topView.transform = CGAffineTransformIdentity;
+        self->mainImageView.frame = CGRectMake(10, self->topView.bounds.size.height + 10, self.view.bounds.size.width-20, self.view.bounds.size.height - self->bottomScrollView.bounds.size.height - self->topView.bounds.size.height - 20);
+        self->bottomScrollView.alpha = 1;
     } completion:^(BOOL finished) {
         
     }];
@@ -391,9 +391,9 @@
 -(void)hideTopView
 {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        topView.transform = CGAffineTransformMakeTranslation(0, -topView.bounds.size.height);
-        mainImageView.frame = CGRectMake(10, 25, self.view.bounds.size.width - 20, self.view.bounds.size.height - 185);
-        bottomScrollView.alpha = 0;
+        self->topView.transform = CGAffineTransformMakeTranslation(0, -self->topView.bounds.size.height);
+        self->mainImageView.frame = CGRectMake(10, 25, self.view.bounds.size.width - 20, self.view.bounds.size.height - 185);
+        self->bottomScrollView.alpha = 0;
     } completion:^(BOOL finished) {
         
     }];

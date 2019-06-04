@@ -88,7 +88,7 @@
                 return ;
             }
             [self setBackgroundColor:COLOR_RGB(25, 25, 25)];
-            [self setImage:_image forState:UIControlStateNormal];
+            [self setImage:self->_image forState:UIControlStateNormal];
             [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         });
     }

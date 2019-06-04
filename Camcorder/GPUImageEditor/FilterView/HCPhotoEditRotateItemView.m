@@ -116,7 +116,7 @@ typedef NS_ENUM(NSInteger, HCImageOrientation){
     [super cancelEdit];
     if (_oriImage) {
         [UIView animateWithDuration:0.3 animations:^{
-            self.mainImageView.image = _oriImage;
+            self.mainImageView.image = self->_oriImage;
         }];
     }
 }

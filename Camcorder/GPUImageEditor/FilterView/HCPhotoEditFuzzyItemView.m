@@ -139,13 +139,13 @@
         
         if (type == 1) {
             float size = MIN(weakSelf.mainImageView.realImageSize.width, weakSelf.mainImageView.realImageSize.height);
-            _currentExcludeCirclePoint.x += pt.x / size;
-            _currentExcludeCirclePoint.y += pt.y / size;
+            self->_currentExcludeCirclePoint.x += pt.x / size;
+            self->_currentExcludeCirclePoint.y += pt.y / size;
 
         }else if (type == 2){
             float size = MIN(weakSelf.mainImageView.realImageSize.width, weakSelf.mainImageView.realImageSize.height);
-            _currentExcludeCirclePoint.x += pt.x / size;
-            _currentExcludeCirclePoint.y += pt.y / size;
+            self->_currentExcludeCirclePoint.x += pt.x / size;
+            self->_currentExcludeCirclePoint.y += pt.y / size;
         }
         
     }];
@@ -154,13 +154,13 @@
         
         if (type == 1) {
             float size = MIN(weakSelf.mainImageView.realImageSize.width, weakSelf.mainImageView.realImageSize.height);
-            _currentExcludeCirclePoint.x += pt.x / size;
-            _currentExcludeCirclePoint.y += pt.y / size;
+            self->_currentExcludeCirclePoint.x += pt.x / size;
+            self->_currentExcludeCirclePoint.y += pt.y / size;
             [weakSelf updateCircleBlurImage];
         }else if (type == 2){
             float size = MIN(weakSelf.mainImageView.realImageSize.width, weakSelf.mainImageView.realImageSize.height);
-            _currentExcludeCirclePoint.x += pt.x / size;
-            _currentExcludeCirclePoint.y += pt.y / size;
+            self->_currentExcludeCirclePoint.x += pt.x / size;
+            self->_currentExcludeCirclePoint.y += pt.y / size;
             [weakSelf updateLineBlurImage];
         }
         
@@ -223,7 +223,7 @@
     view.transform = CGAffineTransformMakeTranslation(0, view.bounds.size.height);
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         view.transform = CGAffineTransformIdentity;
-        editView.alpha = 0;
+        self->editView.alpha = 0;
     } completion:^(BOOL finished) {
         
     }];
@@ -250,11 +250,11 @@
 -(void)hideSliderView
 {
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        sliderConfigView.alpha = 0.4;
-        sliderConfigView.transform = CGAffineTransformMakeTranslation(0, sliderConfigView.bounds.size.height);
-        editView.alpha = 1;
+        self->sliderConfigView.alpha = 0.4;
+        self->sliderConfigView.transform = CGAffineTransformMakeTranslation(0, self->sliderConfigView.bounds.size.height);
+        self->editView.alpha = 1;
     } completion:^(BOOL finished) {
-        [sliderConfigView removeFromSuperview];
+        [self->sliderConfigView removeFromSuperview];
     }];
 }
 
